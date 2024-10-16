@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Love You</title>
+   <style>
+
+    /* Styling untuk latar belakang dan kontainer */
+body {
+    background-color: #fbeffb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+}
+
+/* Styling untuk teks */
+.text {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #333;
+    animation: fadeIn 3s ease-in-out infinite alternate;
+}
+
+/* Styling untuk simbol hati */
+.heart {
+    color: red;
+    font-size: 6rem;
+    position: relative;
+    animation: beat 1s ease-in-out infinite;
+}
+
+/* Styling untuk hati besar */
+.big-heart {
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    animation: pulse 2s infinite ease-in-out;
+    border-radius: 50% 50% 0 0;
+}
+
+.big-heart::before,
+.big-heart::after {
+    content: '';
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.big-heart::before {
+    top: -75px;
+    left: 0;
+}
+
+.big-heart::after {
+    top: 0;
+    left: -75px;
+}
+
+/* Animasi detak jantung */
+@keyframes beat {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Animasi pulse untuk hati besar */
+@keyframes pulse {
+    0% {
+        transform: translateX(-50%) rotate(45deg) scale(1);
+    }
+    50% {
+        transform: translateX(-50%) rotate(45deg) scale(1.1);
+    }
+    100% {
+        transform: translateX(-50%) rotate(45deg) scale(1);
+    }
+}
+
+/* Animasi fade-in untuk teks */
+@keyframes fadeIn {
+    0% {
+        color: #fff;
+    }
+    100% {
+        color: #333;
+    }
+}
+
+body {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.solar-system {
+    position: relative;
+    width: 600px;
+    height: 600px;
+}
+
+.sun {
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, yellow, orange);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 30px yellow, 0 0 60px orange;
+}
+
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+}
+
+.planet {
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
+
+.mercury { background-color: gray; }
+.venus { background-color: orange; }
+.earth { background-color: blue; }
+.mars { background-color: red; }
+.jupiter { background-color: brown; }
+.saturn { background-color: yellow; }
+.uranus { background-color: lightblue; }
+.neptune { background-color: blue; }
+
+.orbit-mercury {
+    width: 150px;
+    height: 150px;
+    animation: orbit 3s linear infinite;
+}
+
+.orbit-venus {
+    width: 200px;
+    height: 200px;
+    animation: orbit 5s linear infinite;
+}
+
+.orbit-earth {
+    width: 250px;
+    height: 250px;
+    animation: orbit 7s linear infinite;
+}
+
+.orbit-mars {
+    width: 300px;
+    height: 300px;
+    animation: orbit 9s linear infinite;
+}
+
+.orbit-jupiter {
+    width: 350px;
+    height: 350px;
+    animation: orbit 12s linear infinite;
+}
+
+.orbit-saturn {
+    width: 400px;
+    height: 400px;
+    animation: orbit 15s linear infinite;
+}
+
+.orbit-uranus {
+    width: 450px;
+    height: 450px;
+    animation: orbit 18s linear infinite;
+}
+
+.orbit-neptune {
+    width: 500px;
+    height: 500px;
+    animation: orbit 20s linear infinite;
+}
+
+@keyframes orbit {
+    0% { transform: rotate(0deg) translateX(-50%); }
+    100% { transform: rotate(360deg) translateX(-50%); }
+}
+
+
+   </style>
+</head>
+<body>
+    <div class="container"></div>
+        <h1 class="text">I <span class="heart">❤</span> You Anis Kesayangan Andri</h1>
+        <div class="big-heart"></div>
+    </div>
+    <div class="solar-system">
+        <div class="sun"></div>
+
+        <div class="orbit orbit-mercury">
+            <div class="planet mercury"></div>
+        </div>
+
+        <div class="orbit orbit-venus">
+            <div class="planet venus"></div>
+        </div>
+
+        <div class="orbit orbit-earth">
+            <div class="planet earth"></div>
+        </div>
+
+        <div class="orbit orbit-mars">
+            <div class="planet mars"></div>
+        </div>
+
+        <div class="orbit orbit-jupiter">
+            <div class="planet jupiter"></div>
+        </div>
+
+        <div class="orbit orbit-saturn">
+            <div class="planet saturn"></div>
+        </div>
+
+        <div class="orbit orbit-uranus">
+            <div class="planet uranus"></div>
+        </div>
+
+        <div class="orbit orbit-neptune">
+            <div class="planet neptune"></div>
+        </div>
+    </div>
+</body>
+</html>
